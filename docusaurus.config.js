@@ -10,7 +10,7 @@ const config = {
   tagline: "Azure OpenAI Service HOL Workshop",
 
   url: "https://revodavid.github.io/",
-  baseUrl: "/OpenAI-Lab-UCB/",
+  baseUrl: "/openai-prompt-engineering-lab/",
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
@@ -21,7 +21,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "revodavid", // Usually your GitHub org/user name.
-  projectName: "OpenAI-Lab-UCB", // Usually your repo name.
+  projectName: "openai-prompt-engineering-lab", // Usually your repo name.
 
   deploymentBranch: "gh-pages", // Branch that GitHub pages will deploy from.
 
@@ -43,7 +43,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/revodavid/OpenAI-Lab-UCB/tree/main",
+          editUrl: "https://github.com/revodavid/openai-prompt-engineering-lab/tree/main",
         },
         blog: false,
         theme: {

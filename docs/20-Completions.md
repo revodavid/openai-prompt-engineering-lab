@@ -1,14 +1,14 @@
 # Understanding Completions
 
-In this section, you will experiment with creating completions with OpenAI natural language models. We will use the GPT-3.5 model `text-davinci-003` throughout this section.
+In this section, you will experiment with creating completions with OpenAI natural language models. We will use the GPT-3.5 model `gpt-35-turbo-instruct` throughout this section.
 
 ## What is a completion?
 
-A natural language model like OpenAI's `text-davinci-003` has a simple purpose: Given a fragment of text (the "prompt"), generate additional text that is likely to follow the prompt. This is called a "completion".
+A natural language model like OpenAI's GPT model has a simple purpose: Given a fragment of text (the "prompt"), generate additional text that is likely to follow the prompt. This is called a "completion".
 
-The definition of "likely" is more complex, but for now, you can think of it as "text similar to text in the training data that often follows text like the prompt". Models like `text-davinci-003` are trained on very large volumes of text data from the internet, and this data influences the model's predictions.
+The definition of "likely" is more complex, but for now, you can think of it as "text similar to text in the training data that often follows text like the prompt". Models like GPT-3.5 are trained on very large volumes of text data collected from various sources, and this data influences the model's predictions.
 
-You can learn more details about how OpenAI's models work at Microsoft Learn: [Understand OpenAI's natural language capabilities](https://learn.microsoft.com/en-us/training/modules/explore-azure-openai/5-understand-openai-natural-language).
+You can learn more details about how OpenAI's models work at Microsoft Learn: [Understand OpenAI's natural language capabilities](https://learn.microsoft.com/training/modules/explore-azure-openai/5-understand-openai-natural-language).
 
 ## Launch the Completions Playground
 
@@ -16,7 +16,7 @@ In the left navigation of the Azure OpenAI Studio home page, click "Completions"
 
 In the drop-downs under "Completions playground" make sure the following options are selected:
 
-1. Deployments: `text-davinci-003`
+1. Deployments: `gpt-35-turbo-instruct`
 2. Examples: `Load an example` (do not change this option yet)
 
 ## Basic Prompting
@@ -29,7 +29,7 @@ Enter the following in the prompt box:
     
 Now click the "Generate" button below the prompt box.
 
-The generated completion will appear in green in the prompt box, following the prompt you entered. The prompt box probably now contains: "I climbed the apple tree and picked an apple".
+The generated completion will appear in green in the prompt box, following the prompt you entered. The prompt box probably now contains: "I climbed the apple tree and picked an apple." (and likely also some additional text below).
 
 ## Useful prompts
 
@@ -37,19 +37,21 @@ Clear the contents of the prompt box. (Control-A and then Delete should do the t
 
 By default, the Completions Playground limits the length of completions to 100 tokens (about 75 words). To allow for longer completions, change the "Max tokens" option in the right column from 100 to 1000.
 
-Now, try a few other prompts and observe the response. Here are some examples to try, but get creative with your own prompts and see what happens!
+Now, try a few other prompts and observe the response. Here are some examples to try, but get creative with your own prompts and see what happens! 
+
+Try using the Regenerate button too: in which cases do the responses vary, and in which cases is the response usually the same?
 
 ```
-    What is the capital of Australia?
+What is the capital of Australia?
 ```
 ```
-    A recipe for banana bread, and an itemized shopping list of the ingredients.
+A recipe for banana bread, and an itemized shopping list of the ingredients.
 ```
 ```
-    What were the 10 top movies of 2001? Respond in the form of a table listing the movie name, the box office earnings, and the studio.
+What were the 10 top movies of 2001? Respond in the form of a table listing the movie name, the box office earnings, and the studio.
 ```
 ```
-    Write a Python function to calculate the nth prime number.
+Write a Python function to calculate the nth prime number.
 ```
 
 ## Generating novel content
@@ -58,7 +60,9 @@ Even though completions are generated based on frequencies of similar content in
 
 Try a prompt like this:
 
-    Write a limerick about the Python programming language
+```
+Write a limerick about the Python programming language
+```
 
 How was the limerick? If you didn't like it, you can always click the "Regenerate" button to generate a new one.
 
@@ -68,7 +72,9 @@ The Temperature parameter controls how "creative" the model is allowed to be. At
 
 Here is another prompt to try with different Temperature values:
 
-    What is a unique and long name for a cat?
+```
+What is a unique and long name for a cat?
+```
 
 **Make sure the Temperature parameter is reset to 1 before you continue.**
 
@@ -87,7 +93,7 @@ In this case, the model is limited by training data, which is current only up to
 
     What is the square root of 98765?
 
-The model will generate an answer to math questions, but there's no guarantee it will be correct. (If it is correct, it's only because the question and answer are represented in the training data.)
+The model will generate an answer to math questions, but there's no guarantee it will be correct. The correct answer here (to 3 dp) is `314.269`. Try clicking Regenerate and see if you get the same answer. (If you do get the correct response to a math question from a foundational GPT model, it's only because the question and answer are well represented in the training data.)
 
 But you could ask the model to write Python code to calculate the square root of 98765, and it would probably do a good job. (Try it!).
 
@@ -105,7 +111,7 @@ In the following section, we'll explore other aspects of completions.
 
 Clear the contents of the prompt box. Enter the prompt below, then click "Generate".
 
-    I climbed the tree and picked a 
+    I climbed the tree and picked a
 
 (Note that we didn't specify a kind of tree this time.) Once again, your completion will appear in green. It might read "an apple", "a pear", or something else entirely. The completion is non-deterministic: the model is not guaranteed to generate the same completion for the same prompt every time. 
 

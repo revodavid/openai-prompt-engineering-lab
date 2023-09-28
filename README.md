@@ -1,11 +1,11 @@
-[Click here for an easy-to-read version of this lab.](https://revodavid.github.io/OpenAI-Lab-UCB/)
+[Click here for an easy-to-read version of this lab.](TODO)
 
 # Explore the OpenAI GPT Models
 
-This session is a 60-minute live demonstration of interaction with OpenAI models GPT3 (text-davinci-003) and ChatGPT (gpt-3.5-turbo). You can follow along with the demonstration live using Use [Azure AI Studio](https://oai.azure.com/portal) or [OpenAI Playground](https://platform.openai.com/playground), or work through the examples in this repository later at your own pace and schedule.
+This session is a 60-minute live demonstration of interaction with OpenAI models GPT-3.5 Instruct (gpt-35-turbo-instruct) and GPT-3.5 Turbo (gpt-3.5-turbo). You can follow along with the demonstration live using Use [Azure AI Studio](https://oai.azure.com/portal) or [OpenAI Playground](https://platform.openai.com/playground), or work through the examples in this repository later at your own pace and schedule.
 
 The goal of this 60-minute session is to:
-  * Understand the implementation and capabilities of GPT3 and ChatGPT
+  * Understand the implementation and capabilities of the GPT-3.5 family of models\
   * Learn how to use and customize natural language generative AI models using prompt engineering techniques
   * Understand the basics of integrating OpenAI models into applications with the API
 
@@ -15,7 +15,7 @@ You will need an Azure Account or an OpenAI account to complete this lab. If you
 
 ## Get Started
 
-Visit [0 Setup.md](0%20Setup.md) to get started.
+Visit [docs/07-Setup.md](docs/07-Setup.md) to get started.
 
 ## Sections
 
@@ -32,22 +32,23 @@ Once you have completed the Setup step, you can skip ahead to any of the other s
 1. [Learnings and Resources](8%20Learnings%20and%20Resources.md). Recap and links for further learning.
 1. [Extra Credit](9%20Extra%20Credit.md). If we have time, explore the capabilities of Bing Chat.
 
-## Citations
+## Citations TODO
 
 "Explore the OpenAI GPT Models", David Smith (Microsoft), 2023. Presented at [UC Berkelyy AI Hackathon](https://ai.calhacks.io), June 17-18 2023. 
 
-When referening this repository, please use the shortlink: https://aka.ms/aoai-lab 
+When referening this repository, please use the shortlink: TODO 
 
 ## Feedback
 
 We would love to hear your feedback on this lab. Please use the Discussions tab for comments, or the Issues tab for bugs or suggestions.
 
-
 # Building the Lab Webpages
+
+TODO
 
 ## Docs published on GitHub Pages
 
-Docs are published on [GitHub Pages](https://revodavid.github.io/OpenAI-Lab-UCB/)
+Docs are published on [GitHub Pages](TODO)
 
 ## Docusaurus
 
