@@ -25,9 +25,9 @@ The instructions in this lab refer to the experience using Azure OpenAI Service.
 
 Once you have completed the Setup step, you can skip ahead to any of the other sections:
 
-1. [Setup](07-Setup.mdx) [11 minutes]. Create and deploy the Azure OpenAI resource in the Azure Portal
+1. [Setup](07-Setup.md) [11 minutes]. Create and deploy the Azure OpenAI resource in the Azure Portal
 2. [Explore Models](10-Explore-Models.md) [2 minutes]. Understand the natural language models availabe in Azure OpenAI Service.
-3. [Completions](20-Completions.mdx) [11 minutes]. Understand and experiment with prompts and completions.
+3. [Completions](20-Completions.md) [11 minutes]. Understand and experiment with prompts and completions.
 4. [Tokens](Tokens) [3 minutes]. Learn about tokens in Azure OpenAI models.
 5. [Applications](Applications) [6 minutes]. Learn about applications of natural language generative AI models.
 6. [Conversations](Conversations) [minutes]. Use the Chat playground.
