@@ -1,13 +1,6 @@
 # Explore OpenAI Models
 
-Before you begin this section, navigate to your Azure OpenAI Studio homepage:
-
-1. In the Azure Portal, click on the Azure OpenAI resource `openai-lab-build`
-2. Click the "Explore" button to open the Azure OpenAI Studio
-
-Remember, you chose your own unique name to replace `openai-lab-build` above. During this workshop you will often need to return to the home page of the Azure OpenAI Studio, so refer back to this section if you need a reminder of how to get there.
-
-> If you're using OpenAI, launch the OpenAI Playground. See [Differences between OpenAI and Azure OpenAI Service](08-OpenAI-Setup.md) for details.
+In this section, we'll take a high-level view of the models available from OpenAI.
 
 ## The GPT-35 family of models
 
@@ -52,7 +45,12 @@ There are many considerations when choosing a model, including cost, availabilit
 
 > If you're using OpenAI instead of Azure OpenAI Service, you don't need to pre-deploy models and can skip to the next section.
 
-Return to the Azure OpenAI Studio. (If you've closed the browser window,select your Azure OpenAI resource in the [Azure Portal](https://portal.azure.com), select the "Overview" tab, and click "Go to Azure OpenAI Studio".)
+If it's not open already, navigate to your Azure OpenAI Studio homepage:
+
+1. In the [Azure Portal](https://portal.azure.com), click on the Azure OpenAI resource `openai-lab-build` and select the Overview tab.
+2. Click the "Go To Azure OpenAI Studio" link to open the Azure OpenAI Studio.
+
+Remember, you chose your own unique name to replace `openai-lab-build` above. During this workshop you will often need to return to the home page of the Azure OpenAI Studio, so refer back to this section if you need a reminder of how to get there.
 
 Click on **Deployments** in the "Management" section of the left pane. You should have two models deployed:
 
