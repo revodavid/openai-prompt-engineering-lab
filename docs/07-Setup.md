@@ -2,7 +2,9 @@
 sidebar_position: 0
 ---
 
-# Workshop Setup
+# Workshop Setup in Azure
+
+*You can skip to the next section if you plan to use OpenAI instead of Azure OpenAI Service*
 
 ### Create an Azure OpenAI Service resource in Azure Portal
 

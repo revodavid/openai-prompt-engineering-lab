@@ -7,6 +7,8 @@ Before you begin this section, navigate to your Azure OpenAI Studio homepage:
 
 Remember, you chose your own unique name to replace `openai-lab-build` above. During this workshop you will often need to return to the home page of the Azure OpenAI Studio, so refer back to this section if you need a reminder of how to get there.
 
+> If you're using OpenAI, launch the OpenAI Playground. See [Differences between OpenAI and Azure OpenAI Service](08-OpenAI-Setup.md) for details.
+
 ## Completions vs Chat models
 
 TODO - also discuss Max Request limit.
