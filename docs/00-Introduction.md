@@ -18,23 +18,21 @@ If you do not have an Azure Account, you can create one [create one for free](ht
 
 The instructions in this lab refer to the experience using Azure OpenAI Service. There are slight differences when using OpenAI services, which are dicussed in the next section.
 
-
-
-
 ## Sections
 
 Once you have completed the Setup step, you can skip ahead to any of the other sections:
 
-1. [Setup](07-Setup.md) [11 minutes]. Create and deploy the Azure OpenAI resource in the Azure Portal
-2. [Explore Models](10-Explore-Models.md) [2 minutes]. Understand the natural language models availabe in Azure OpenAI Service.
-3. [Completions](20-Completions.md) [11 minutes]. Understand and experiment with prompts and completions.
-4. [Tokens](Tokens) [3 minutes]. Learn about tokens in Azure OpenAI models.
-5. [Applications](Applications) [6 minutes]. Learn about applications of natural language generative AI models.
-6. [Conversations](Conversations) [minutes]. Use the Chat playground.
-7. [Prompt Engineering](Prompt-Engineering) [minutes]. Learn how to use prompt engineering to customize the behavior of the model.
-8. [Using the API](Using-the-API) [minutes]. Learn how to use the Azure OpenAI API.
-9. [Learnings and Resources](Learnings-and-Resources) [minutes]. Recap and links for further learning.
-10. [Extra Credit](Extra-Credit) [minutes]. If you have time, explore the capabilities of Bing Chat.
+1. [Setup](07-Setup.md). Create and deploy the Azure OpenAI resource in the Azure Portal.
+1. [OpenAI Setup](08-OpenAI-Setup.md). Alternatively, if you are using OpenAI, differences to be aware of for this lab.
+2. [Explore Models](10-Explore-Models.md). Understand the OpenAI natural language models available.
+3. [Completions](20-Completions.md). Understand and experiment with prompts and completions.
+4. [Tokens](30-Tokens.md). Learn about tokens in OpenAI models.
+5. [Applications](40-Applications.md). Learn about applications of natural language generative AI models.
+6. [Conversations](50-Conversations.md). Use the Chat playground.
+7. [Prompt Engineering](60-Prompt-Engineering.md). Learn how to use prompt engineering to customize the behavior of the model.
+8. [Using the API](70-Using-the-API.md). Learn how to use integrate OpenAI models into applications via the API.
+9. [Learnings and Resources](80-Learnings-and-Resources.md). Recap and links for further learning.
+10. [Extra Credit](90-Extra-Credit.md). If you have time, explore the capabilities of Bing Chat.
 
 ## Feedback
 
