@@ -32,11 +32,14 @@ This workshop will cover the following topics:
 1. Learnings and Resources: Recap and links for further learning.
 1. Extra Credit: Explore the capabilities of Bing Chat.
 
-## Citations TODO
+## Citations and Credits
 
-"Explore the OpenAI GPT-3.5 Models", David Smith (Microsoft), 2023. Presented at TODO 
+"Explore the OpenAI GPT-3.5 Models", David Smith (Microsoft), 2023. 
+When referening this repository, please use the shortlink: https://aka.ms/exploring-gpt35
 
-When referening this repository, please use the shortlink: TODO 
+Presented at Make AI Real in a Day, October 26 2023. 
+
+This repository was created by David Smith (Microsoft). Some content [contributed by](https://github.com/hnky/AzureOpenAIService-Workshop) Henk Boelman (Microsoft) and Amy Boyd (Microsoft). Docusaurus integration by Dave Glover (Microsoft).
 
 ## This lab is open source
 
