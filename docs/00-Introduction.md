@@ -36,7 +36,7 @@ Once you have completed the Setup step, you can skip ahead to any of the other s
 
 ## Feedback
 
-We would love to hear your feedback on this lab. Please use the Discussions tab for comments, or the Issues tab for bugs or suggestions.
+We would love to hear your feedback on this lab. Please visit the [Github repository for this lab](https://github.com/revodavid/openai-prompt-engineering-lab) and use the Discussions tab for comments, or the Issues tab for bugs or suggestions.
 
 
 
