@@ -75,6 +75,18 @@ The actual completion is the first element of the `choices` tag in the array (he
 
 > Also note the fields related to `prompt_filter_results` and `content_filter_results`. The [Azure OpenAI Content Filtering](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/content-filter) system may be configured to block prompts and completions for content safety, and these fields may be used by the developer to detect that outcome.
 
+## Which model should I use?
+
+As a developer, there are many considerations when choosing a model, including cost, availability, performance, and capability. But as a general guide, we recommend the following:
+
+* Start with `gpt-35-turbo`. This model is widely available, very economical, has good performance, and its "Chat" API is flexible enough to be used for a wide range of tasks beyond chat and conversation.
+
+* For applications where text completion, information extraction, or sentiment analysis is the primary task, the simpler Completions API of `gpt-35-turbo-instruct` may be attractive. (There are older, simpler and cheaper models that may also serve these applications well.)
+
+* If you need to generate more than 4,096 tokens, or need to support larger prompts or outputs, the `gpt-35-turbo-16k` variant of GPT-3.5 Turbo supports a context window of 16,384 tokens. 
+
+* The most powerful model available today is `gpt-4` (supporting a token window of 8192 tokens), and its 32k variant `gpt-4-32k` which supports up to 32,768 tokens. While powerful, these models are more expensive and slower than GPT-3.5, and have more restricted availability.
+
 ## Next Steps
 
 This section was intended to give a taste of automating prompt completions using the Azure OpenAI Service API. For more information on the API, see the [Azure OpenAI Service API Reference](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/reference).

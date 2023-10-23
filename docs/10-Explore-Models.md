@@ -29,18 +29,6 @@ When using any large langauge models, you should be aware of the following detai
 
 * Prompt Window Limit. Large language models have a maximum limit on the size of the prompt you can provide as input. The limit is measured in "tokens" (a concept we'll explore later in the lab) and *both* the input and the generated response *combined* must fit within this window. For now, know that the GPT-35 models we are using in this lab have a prompt window limit of 4,096 tokens, equivalent to about 3,000 English words.
 
-## Which model should I use?
-
-There are many considerations when choosing a model, including cost, availability, performance, and capability. But as a general guide, we recommend the following:
-
-* Start with `gpt-35-turbo`. This model is widely available, very economical, has good performance, and its "Chat" interface is flexible enough to be used for a wide range of tasks beyond chat and conversation.
-
-* For applications where text completion, information extraction, or sentiment analysis is the primary task, the simpler Completions API of `gpt-35-turbo-instruct` may be attractive. (There are older, simpler and cheaper models that may also serve these applications well.)
-
-* If you need to generate more than 4,096 tokens, or need to support larger prompts or outputs, there is a variant of GPT-3.5 Turbo, `gpt-35-turbo-16k` that supports a context window of 16,384 tokens. 
-
-* The most powerful model available today is `gpt-4` (supporting a token window of 8192 tokens), or the 32k variant `gpt-4-32k` which supports up to 32,768 tokens. While powerful, these models are more expensive and slower than GPT-3.5, have limited availability, and you must request access to use them with Azure OpenAI Service.
-
 ## Check your deployed models in Azure OpenAI Studio
 
 > If you're using OpenAI instead of Azure OpenAI Service, you don't need to pre-deploy models and can skip to the next section.
