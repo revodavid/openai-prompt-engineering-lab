@@ -3,7 +3,7 @@ sidebar_position: 0
 slug: /
 ---
 
-# Introduction 
+# Explore the OpenAI GPT-3.5 Models 
 
 The goal of this 45-minute lab is to:
 * Understand the implementation and capabilities of the GPT-3.5 family of models

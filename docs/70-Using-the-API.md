@@ -4,19 +4,21 @@ Note, this section assumes familiarity with developer tools including the Azure 
 
 The Completions Playground and the Chat Playground in the Azure OpenAI Studio are handy tools for experimenting with the OpenAI natural language models. To add the power of these models to your applications, however, you will use the Azure OpenAI Service API.
 
+> OpenAI also provides an API for its models. The process and API format is very similar to that of Azure OpenAI Service, but we won't cover the differences in this section.
+
 ## The Completion and Conversation APIs
 
-The Azure OpenAI Service API provides two APIs: the Completions API and the Conversation API. The Completion API takes a single prompt as input and is used to generate text completions. The Conversation API takes a conversation history as input and generates the next AI response to the conversation. The Conversation API is particularly suitable for chatbot applications but can be used for other applications as well.
+The Azure OpenAI Service API provides two APIs: the Completions API and the Conversation API. The Completions API takes a single prompt as input and is used to generate text completions. The Conversation API takes a conversation history as input and generates the next AI response to the conversation. The Conversation API is particularly suitable for chatbot applications but can be used for other applications as well.
 
 You can find a more complete list at [aka.ms/oai/models](https://aka.ms/oai/models).
 
 | Model | Model ID | API Type |
 | ----| --------------- | --------------- |
-| GPT-3.5 | `text-davinci-003` | Completions |
-| ChatGPT | `gpt-35-turbo` | Conversation |
+| GPT-3.5 Instruct | `gpt-35-turbo-instruct` | Completions |
+| GPT-3.5 Turbo | `gpt-35-turbo` | Conversation |
 | GPT-4 | `gpt-4` | Conversation |
 
-In this workshop, we will have been using GPT-3.5 and ChatGPT. GPT-4 is currently in preview in Azure OpenAI Service, and existing customers can request access by [filling out this form](https://aka.ms/oai/get-gpt4).
+In this workshop, we have been using GPT-3.5 Instruct and GPT-3.5 Turbo. GPT-4 is also available in Azure OpenAI Service and OpenAI.
 
 ### Finding your API key
 
@@ -24,7 +26,10 @@ Regardless of which API you use, you will need your unique API key to successful
 
 1. Navigate to your `openai-lab-build` resource
 2. Click "Keys and Endpoint" in the left-hand menu
-3. Copy the Key 1 value and keep it handy (say, in a Notepad window). You'll be needing it soon.
+
+You can also click the "View Code" button in the playground access the Key there. (This is same as Key 1 from the Azure Portal.)
+
+Copy the Key 1 value and keep it handy (say, in a Notepad window). You'll be needing it soon.
 
 ### The Completions API with GPT-3.5
 
@@ -37,34 +42,38 @@ Return to the Completions Playground in the Azure OpenAI Studio.
 3. Copy the curl command to the clipboard, and open the text editor of your choice, and paste the curl command into the editor window.
 4. Update the curl command with your API key. The command should look something like this:
 
-    ```bash
-    curl https://openai-lab-build.openai.azure.com/openai/deployments/text-davinci-003/completions?api-version=2022-12-01 \
-    -H "Content-Type: application/json" \
-    -H "api-key: 09c999b9999c99cda999de9999b9ca9d" \
-    -d '{
-    "prompt": "A long and unusual name for a cat: ",
-    "max_tokens": 100,
-    "temperature": 1,
-    "frequency_penalty": 0,
-    "presence_penalty": 0,
-    "top_p": 0.5,
-    "best_of": 1,
-    "stop": null
-    }'
-
+```
+curl https://openai-instruct.openai.azure.com/openai/deployments/gpt-35-turbo-instruct/completions?api-version=2023-09-15-preview \
+  -H "Content-Type: application/json" \
+  -H "api-key: 09c999b9999c99cda999de9999b9ca9d" \
+  -d '{
+  "prompt": "A long and unusual name for a cat: `",
+  "max_tokens": 100,
+  "temperature": 1,
+  "frequency_penalty": 0,
+  "presence_penalty": 0,
+  "top_p": 0.5,
+  "best_of": 1,
+  "stop": null
+}'
+```
 ### Run the CURL command
 
 1. Open the [Azure Cloud Shell (https://shell.azure.com/)](https://shell.azure.com/), by clicking the ">" icon in the top menu bar of the Azure Portal.
 2. If you see "Powershell" in the Cloud Shell menubar, switch to `Bash` using the dropdown menu.
 3. Paste the updated curl command that contains your API key into the shell, and press `Enter`. (The easiest way to paste into the Cloud Shell window is by right-clicking the mouse in the window and selecting Paste from the context menu.)
 
+> You paste the curl command into any bash terminal, too.
+
 The curl command will return a JSON object containing the completion, and  will look similar to this:
 
 ```json
-{"id":"cmpl-7AB4yX79X0JxCvXXXDe6Lub8XXq0l","object":"text_completion","created":1682660224,"model":"text-davinci-003","choices":[{"text":"\n\nSir Fluffington Pawsworth IV","index":0,"finish_reason":"stop","logprobs":null}],"usage":{"completion_tokens":10,"prompt_tokens":9,"total_tokens":19}}
+{"id":"cmpl-8DIoBARcuYBJUs2lD1mDUPpDmLj61","object":"text_completion","created":1698181255,"model":"gpt-35-turbo-instruct","prompt_filter_results":[{"prompt_index":0,"content_filter_results":{"hate":{"filtered":false,"severity":"safe"},"self_harm":{"filtered":false,"severity":"safe"},"sexual":{"filtered":false,"severity":"safe"},"violence":{"filtered":false,"severity":"safe"}}}],"choices":[{"text":"\n\n\"Sir Reginald Fluffington III, Esquire of Whiskerhaven\"","index":0,"finish_reason":"stop","logprobs":null,"content_filter_results":{"hate":{"filtered":false,"severity":"safe"},"self_harm":{"filtered":false,"severity":"safe"},"sexual":{"filtered":false,"severity":"safe"},"violence":{"filtered":false,"severity":"safe"}}}],"usage":{"completion_tokens":19,"prompt_tokens":10,"total_tokens":29}}
 ```
 
-The actual completion is the first element of the `choices` tag in the array (here, "Sir Fluffington Pawsworth IV" with some added whitespace). An application calling this API would likely extract and clean that element before presenting it to the user via the UI.
+The actual completion is the first element of the `choices` tag in the array (here, "Sir Reginald Fluffington III, Esquire of Whiskerhaven" with some added whitespace). An application calling this API would likely extract and clean that element before presenting it to the user via the UI.
+
+> Also note the fields related to `prompt_filter_results` and `content_filter_results`. The [Azure OpenAI Content Filtering](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/content-filter) system may be configured to block prompts and completions for content safety, and these fields may be used by the developer to detect that outcome.
 
 ## Next Steps
 
