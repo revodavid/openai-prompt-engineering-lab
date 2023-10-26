@@ -5,10 +5,12 @@ slug: /
 
 # Explore the OpenAI GPT-3.5 Models 
 
-The goal of this 45-minute lab is to:
+The goal of this 60-minute lab is to:
 * Understand the implementation and capabilities of the GPT-3.5 family of models
 * Learn how to use and customize natural language generative AI models using prompt engineering techniques
 * Understand the basics of integrating OpenAI models into applications with the API
+
+If you like, you can follow along with a live recording of this lab on YouTube: [Make Azure AI Real: Exploring Azure OpenAI Service](https://www.youtube.com/watch?v=9auAlK1l39Q).
 
 ## Pre-requisites
 

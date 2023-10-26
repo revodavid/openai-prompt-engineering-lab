@@ -17,6 +17,8 @@ You will need an Azure Account or an OpenAI account to complete this lab. If you
 
 Visit [the lab website](https://revodavid.github.io/openai-prompt-engineering-lab/) to get started.
 
+Watch a video recording of this lab on YouTube: [Make Azure AI Real: Exploring Azure OpenAI Service](https://www.youtube.com/watch?v=9auAlK1l39Q).
+
 ## Overview
 
 This workshop will cover the following topics:
